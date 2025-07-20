@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy-to-github-pages:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x # or your target version
+
+    - name: Publish .NET Project
+      run: dotnet publish BlazorGitHubPagesDemo.csproj -c Release -o release --nologo
+
+    - name: Rewrite base href
+      uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
+      with:
+        html_path: release/wwwroot/index.html
+        base_href: /BlazorGitHubPagesDemo/
+
+    - name: Add .nojekyll
+      run: touch release/wwwroot/.nojekyll
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.2
+      with:
+        branch: gh-pages
+        folder: release/wwwroot
+        token: ${{ secrets.GITHUB_TOKEN }}
