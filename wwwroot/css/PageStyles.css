@@ -1,0 +1,29 @@
+﻿/*
+.pagestyle p {
+    font-size: 2rem;
+    color: rosybrown;
+    background-color: palevioletred;
+    background-image: url("Assets/images/Profile/tshepho.jpg");
+    background-size: cover; /* ensures the image covers the whole card 
+    background-position: center; /* keeps the image centered 
+    background-repeat: no-repeat; /* prevents the image from tiling */
+/*}
+    */
+.card
+{
+    background-image: url("Assets/images/Profile/tshepho.jpg");
+    background-size: cover; /* ensures the image covers the whole card */
+    background-position: center; /* keeps the image centered */
+    background-repeat: no-repeat; /* prevents the image from tiling */
+}
+
+/*
+particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+    */

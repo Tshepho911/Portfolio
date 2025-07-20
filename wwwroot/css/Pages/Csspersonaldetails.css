@@ -1,0 +1,30 @@
+/*body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #1f1c2c, #928dab, #2c3e50, #3498db);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}*/
+
+.socialcard {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+    .socialcard h2 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+     .socialcard p {
+        font-size: 1.2rem;
+        color: #666;
+        line-height: 1.6;
+    }
