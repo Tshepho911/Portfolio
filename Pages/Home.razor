@@ -2,6 +2,114 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<section class="hero">
+    
+    <div id= "background-animation"></div>
+    <div class="animated-background"></div>
 
-Welcome to your new app.
+     
+  
+    @* profile card*@ 
+    <section class="hero-section">
+        
+        <div class="hero-overlay">
+        <h1>Empowering Ideas Through Code</h1>
+        <p>Computer Scientist & Applied Mathematician | Backend Engineer | Server Strategist | Front-End Enthusiast</p>
+
+        <div class="profile-card">
+          <img src="Assets/Images/Profile/webhosting.jpg" alt="Tshepho's Avatar">
+          <h2>Diamond Moleba</h2>
+          <p>Solving complex problems through secure, high-performance code.</p> 
+          <br>
+          <p>
+            <a href="personal details" class="cta-button">📨 Contact Me</a>
+          </p>
+        </div>
+      </div>
+ 
+    </section>   
+    
+        <div class="profile-card1">
+            <div class="bio">
+                
+                    <p>
+                        <h2>👋 About Me</h2>
+                        Hello and welcome to my online profile!
+                        I'm Diamond — a passionate <a href = "PersonalDetails"> Computer Scientist</a> and Applied Mathematician specializing in <a href="#projects">Software Development</a>, **Web Hosting**, and **Server Management**.
+                        As a resilient problem solver, I thrive on writing high-performance, secure code. My interests span **Data Science**, **Machine Learning**, and **AI**, and I enjoy building programs that think smart.
+                        Though I’m a full-stack developer, my heart lies in backend engineering — the brains behind the screen. I bring clever configurations and server-side magic to life.
+                        As a strong team leader, I know how to align team roles with individual strengths and weaknesses for maximum impact.
+                        <br><br>    My love for solving and resolving complex daily life problems and tasks with computer programmes, drives me to create innovative solutions that make a difference. I believe in the power of technology to transform lives and am committed to continuous learning and growth in this ever-evolving field.
+                        I would love to see myself one day building a software programme that helps humanity in enhancing their abilities and capabilities.  
+                        <br><br>
+                        Feel free to explore my <a href="/projects">Projects</a> and get a glimpse of what I’ve been building!
+                   </p>
+                  
+                    <ul>
+                      <li>🔍 Obsessed with optimization and automation</li>
+                      <li>🧠 Exploring AI, Machine Learning, and Data Science</li>
+                      <li>🌐 Building scalable, resilient server architectures </li>
+                    </ul>
+                    <p>
+                    I believe in purpose-driven technology — software that enhances human capability and transforms lives. My mission: create tools that make the complex feel effortless.
+                   </p>
+
+                    <a href="projects" class="cta-button">See My Projects</a>   
+                    <a href="personal details" class="cta-button">📨 Contact Me</a>
+            </div>
+        
+     </div>
+
+
+   
+    @*
+
+   
+
+
+    <figure>
+        <img src="Assets/Images/Profile/serverman.jpg" alt="Software developer">
+        <figcaption>Tshepho – Full-Stack C# Developer </figcaption>
+    </figure>
+    
+  <a href="/about" class="btn-primary">Learn More</a>
+
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>Tshepho</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>tshepho@example.com</td>
+        </tr>
+        <tr>
+            <th>Location:</th>
+
+
+
+            <td>Tshwane, South Africa</td>
+        </tr>
+    </table>
+    *@
+</section>
+
+
+
+<footer>
+    <p>&copy; 2025 Tshepho'sPortfolio. All rights reserved.</p>
+</footer>
+
+@inject IJSRuntime JSRuntime
+
+@code{
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Call your animation trigger logic here
+            await JSRuntime.InvokeVoidAsync("initAnimatedBackground");
+        }
+    }
+}
